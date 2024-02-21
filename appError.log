@@ -30,3 +30,13 @@
 2024-02-20 21:18:32 error: handleAudit error : Auditing smart contract failed
 2024-02-20 21:19:46 error: AuditContract error : Unexpected token 'T', "The evalua"... is not valid JSON
 2024-02-20 21:19:46 error: handleAudit error : Auditing smart contract failed
+2024-02-20 23:34:23 error: AuditContract error : Request failed with status code 401
+2024-02-20 23:34:23 error: handleAudit error : Auditing smart contract failed
+2024-02-20 23:34:59 error: AuditContract error : Request failed with status code 401
+2024-02-20 23:34:59 error: handleAudit error : Auditing smart contract failed
+2024-02-20 23:36:50 error: AuditContract error : Request failed with status code 401
+2024-02-20 23:36:50 error: handleAudit error : Auditing smart contract failed
+2024-02-20 23:37:36 error: AuditContract error : Request failed with status code 401
+2024-02-20 23:37:36 error: handleAudit error : Auditing smart contract failed
+2024-02-20 23:54:05 error: AuditContract error : Request failed with status code 401
+2024-02-20 23:54:05 error: handleAudit error : Auditing smart contract failed

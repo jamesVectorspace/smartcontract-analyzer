@@ -5,7 +5,6 @@ require("dotenv").config();
 
 const handleAuditContract = async (contractCode) => {
   try {
-    console.log("process.env.OPENAI_API_KEY", process.env.OPENAI_API_KEY);
     const promptContent = getPrompt(contractCode);
     const messages = [{ role: "user", content: promptContent }];
 
@@ -25,8 +24,8 @@ const handleAuditContract = async (contractCode) => {
     );
 
     let rawResponse = response.data.choices[0].message.content.trim();
-    rawResponse = rawResponse.replace("```{", "{");
-    rawResponse = rawResponse.replace("}```", "}");
+    rawResponse = rawResponse.replace("```", "");
+    rawResponse = rawResponse.replace("```", "");
 
     logger.debug(`Raw Response: ${rawResponse}`);
 
