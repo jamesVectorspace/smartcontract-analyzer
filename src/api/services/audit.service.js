@@ -5,6 +5,7 @@ require("dotenv").config();
 
 const handleAuditContract = async (contractCode) => {
   try {
+    console.log("process.env.OPENAI_API_KEY", process.env.OPENAI_API_KEY);
     const promptContent = getPrompt(contractCode);
     const messages = [{ role: "user", content: promptContent }];
 
