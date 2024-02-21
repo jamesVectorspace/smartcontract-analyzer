@@ -31,7 +31,7 @@ const handleAuditContract = async (contractCode) => {
 
     return {
       status: true,
-      message: JSON.parse(rawResponse),
+      message: rawResponse, //JSON.parse(),
     };
   } catch (err) {
     logger.error(`AuditContract error : ${err.message}`);
