@@ -27,6 +27,8 @@ const handleAuditContract = async (contractCode) => {
     // rawResponse = rawResponse.replace("```", "");
     // rawResponse = rawResponse.replace("```", "");
 
+    logger.debug("===", response.data.choices[0].message);
+
     logger.debug(`Raw Response: ${rawResponse}`);
 
     return {
