@@ -17,7 +17,7 @@ const handleAuditContract = async (contractCode) => {
       },
       {
         headers: {
-          Authorization: `Bearer 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`, //${process.env.OPENAI_API_KEY}
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
           "Content-Type": "application/json",
         },
       }
