@@ -1,5 +1,5 @@
 const getPrompt = (code) => {
-    const prompt =  `
+  const prompt = `
     Given a smart contract codebase, conduct a detailed evaluation. For each applicable subsection, provide a rating out of 100 based on adherence to best practices, potential vulnerabilities, and the robustness of the code. Compute the section ratings as an average of its relevant subsections. Finally, provide an overall contract rating based on the weighted average of all section ratings.Return the results in the following JSON format:{
         'sections':[
             {
@@ -19,6 +19,9 @@ const getPrompt = (code) => {
         'finalRating':AVERAGE_OF_SECTIONS,
         'overallFeedback':'GENERAL_OVERALL_FEEDBACK'
         }
+
+        Output should be only JSON, its script for automatic progress, i dont want any other letters.
+        You are making some bad JSON, so my script is not working, make it correctly.
 
         1. Security Checks:
             * Reentrancy:
@@ -87,7 +90,7 @@ const getPrompt = (code) => {
         Final Overall Contract Rating:
         Compute this as the average of all section ratings, ensuring you account for sections omitted due to irrelevance. Provide this overall contract rating out of 100 along with feedback summarizing the overall evaluation.
             ${code}`;
-    return prompt;
-}
+  return prompt;
+};
 
-module.exports = { getPrompt }
+module.exports = { getPrompt };

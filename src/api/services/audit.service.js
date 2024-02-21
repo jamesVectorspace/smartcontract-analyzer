@@ -24,16 +24,15 @@ const handleAuditContract = async (contractCode) => {
     );
 
     let rawResponse = response.data.choices[0].message.content.trim();
-    // rawResponse = rawResponse.replace("```", "");
-    // rawResponse = rawResponse.replace("```", "");
 
-    logger.debug("===", response.data.choices[0].message);
+    rawResponse = rawResponse.replace("```", "");
+    rawResponse = rawResponse.replace("```", "");
 
     logger.debug(`Raw Response: ${rawResponse}`);
 
     return {
       status: true,
-      message: rawResponse, //JSON.parse(),
+      message: JSON.parse(rawResponse),
     };
   } catch (err) {
     logger.error(`AuditContract error : ${err.message}`);
